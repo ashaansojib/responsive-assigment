@@ -124,13 +124,44 @@ p.about-description {
     padding: 20px;
     width: 150px;
     text-align: center;
-    position: absolute;
     border-radius: 10px;
     color: #fff;
     font-weight: bold;
     position: absolute;
     left: 500px;
     bottom: 0;
+}
+/* Our Achivement area css */
+.achive-details {
+    padding: 50px 0;
+}
+.achive-info {
+    padding: 30px 10px;
+    width: 450px;
+}
+.achive-info h1 {
+    font-size: 2em;
+}
+.feedback-cat {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+}
+.feedback-info img {
+    width: 50px;
+    height: 50px;
+}
+.feedback-info {
+    width: 186px;
+    padding: 20px;
+    border: 1px solid #02B290;
+    text-align: center;
+    transition: all 2s ease;
+}
+.active:hover .feedback-info{
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transform: rotateY(360deg);
 }
 /* grid area define */
 nav{
@@ -190,8 +221,21 @@ main{
         padding: 10px;
         grid-template-columns: repeat(1, 1fr);
     }
-
+    /* about us medium device */
+    .about-items {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .experience-btn {
+        left: 50px;
+    }
+    /* achive medium device */
+    .feedback-cat {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
 }
+
 /* this is mobile responsive style */
 @media only screen and (max-width: 576px) {
     /* body content are */
@@ -233,5 +277,18 @@ main{
         grid-template-columns: repeat(1, 1fr);
         padding: 10px;
         gap: 17px;
+    }
+    /* experience section mobile view */
+    .about-items {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .experience-btn {
+        left: 50px;
+    }
+    /* achieve area */
+    .feedback-cat {
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
     }
 }
