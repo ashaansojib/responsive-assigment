@@ -69,7 +69,30 @@ a.btn-primary {
 .head-info h1 {
     font-size: 3em;
 }
-
+/* main content css */
+/* featured section style */
+.featured-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.image-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+.featured-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: flex-start;
+}
+.feature-title h1 {
+    font-size: 45px;
+}
+.feature-describe {
+    padding-bottom: 10px;
+}
 /* grid area define */
 nav{
     grid-area: nav;
@@ -77,11 +100,16 @@ nav{
 header{
     grid-area: header;
 }
+main{
+    grid-area: main;
+    padding: 50px 0;
+}
 .main-wrapper{
     display: grid;
     grid-template-areas:
     "nav    nav    nav    nav"
     "header header  header  header"
+    "main   main    main    main"
     ;
 }
 
@@ -91,6 +119,11 @@ header{
     .container{
         width: 100%;
         margin: 0 auto;
+    }
+    /* featured section style */
+    .featured-items{
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 /* laptop and tablet view */
@@ -103,6 +136,7 @@ header{
         grid-template-areas: 
         "nav"
         "header"
+        "main"
         ;
     }
     .nav-item {
@@ -112,6 +146,12 @@ header{
     ul.flex-container{
         flex-direction: column;
     }
+    /* featured section style */
+    .featured-items{
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 /* this is mobile responsive style */
 @media only screen and (max-width: 576px) {
@@ -124,6 +164,7 @@ header{
         grid-template-areas: 
         "nav"
         "header"
+        "main"
         ;
     }
     /* navigation mobile style */
@@ -144,5 +185,14 @@ header{
     }
     .head-info h1 {
         font-size: 2em;
+    }
+    /* featured section style */
+    .featured-items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .image-items {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        gap: 17px;
     }
 }
