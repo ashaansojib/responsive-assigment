@@ -61,10 +61,11 @@ a.btn-primary {
     flex-direction: column;
     background-color: rgba(255, 144, 14, 0.1);
     align-items: center;
+    margin-bottom: 10px;
 }
 .head-info {
     width: 550px;
-    height: 270px;
+    height: 300px;
 }
 .head-info h1 {
     font-size: 3em;
@@ -192,6 +193,10 @@ p.about-description {
 /* extra section */
 section.blog-area {
     padding-bottom: 30px;
+}
+.blog-section-title {
+    text-align: center;
+    padding: 10px;
 }
 .blog-items{
     display: grid;
