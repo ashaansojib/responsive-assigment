@@ -183,12 +183,44 @@ p.about-description {
 .footer-content {
     padding: 10px;
     height: 50px;
-    background-color: #03203C;
     color: #fff;
     font-size: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* extra section */
+section.blog-area {
+    padding-bottom: 30px;
+}
+.blog-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+article.post {
+    padding: 10px;
+    width: 323px;
+}
+.thumbnail {
+    height: 50%;
+    overflow: hidden;
+}
+p.blog-description {
+    line-height: 26px;
+    padding: 10px 0;
+}
+h2.blog-title {
+    padding-top: 10px;
+}
+a.blog-btn {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #5A20CB;
+    color: #fff;
+}
+article.post:hover .thumbnail img{
+    transform: scale(1.8);
+    transition: all .8s;
 }
 
 /* grid area define */
@@ -200,10 +232,10 @@ header{
 }
 main{
     grid-area: main;
-    padding: 50px 0;
 }
 footer{
     grid-area: footer;
+    background-color: #03203C;
 }
 .main-wrapper{
     display: grid;
@@ -335,6 +367,17 @@ footer{
     }
     /* footer */
     .footer-content{
+        text-align: center;
+    }
+    /* extra blogs post */
+    .blog-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    article.post {
+        width: 100%;
+        padding: 10px;
+    }
+    .post-info {
         text-align: center;
     }
 }
