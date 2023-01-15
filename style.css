@@ -70,6 +70,9 @@ a.btn-primary {
 .head-info h1 {
     font-size: 3em;
 }
+.head-image {
+    padding-top: 30px;
+}
 /* main content css */
 /* featured section style */
 .featured-items{
